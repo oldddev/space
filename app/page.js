@@ -1,109 +1,44 @@
-import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
-import { IoMdMail } from "react-icons/io";
-import { IoBasketballOutline } from "react-icons/io5";
+import Navbar from "@/components/navbar";
 import { Manrope } from "next/font/google";
-import { GoDotFill } from "react-icons/go";
+
+import { IoIosAlert } from "react-icons/io";
 
 const manrope = Manrope();
 
 export default function Home() {
   return (
-    <section className="flex">
-      <section className="bg-neutral-900 w-[20vw] h-screen relative border-r-1 border-r-stone-700">
-        <footer className="p-7 border-b-1 border-b-stone-700">
-          <h2 className="text-xm">GET IN TOUCH</h2>
-          <section className="flex mt-5">
-            <div className="w-12 h-12 bg-[#3f3f3f] outline-1 outline-[#595959] flex items-center justify-center">
-              <FaGithub size={23} />
-            </div>
-            <div className="w-12 h-12 bg-[#3f3f3f] outline-1 outline-[#595959] flex items-center justify-center">
-              <FaInstagram />
-            </div>
-            <div className="w-12 h-12 bg-[#3f3f3f] outline-1 outline-[#595959] flex items-center justify-center">
-              <BsTwitterX />
-            </div>
-            <div className="w-12 h-12 bg-[#3f3f3f] outline-1 outline-[#595959] flex items-center justify-center">
-              <IoMdMail />
-            </div>
-            <div className="w-12 h-12 bg-[#3f3f3f] outline-1 outline-[#595959] flex items-center justify-center">
-              <IoBasketballOutline />
-            </div>
-          </section>
-        </footer>
-        <section className="p-7 pb-0">
-          <header className="mb-5 text-xm">
-            <h2>PROGRAMMING LANAGUAGES</h2>
+    <>
+      <section className="h-screen w-screen flex items-center flex-col justify-center">
+        <section className="flex h-130 w-[85vw] md:w-200 bg-neutral-900 rounded-2xl border-1 border-neutral-800 flex-col">
+          <header className="p-10 md:leading-8 leading-7">
+            <h2 className={` text-2xl ${manrope.className} mb-3`}>
+              They left clues.
+            </h2>
+            <p className={`text-xm text-neutral-400 leading-6`}>
+              Studying What Was Never Meant to Be Found
+            </p>
           </header>
-          <section className="ml-3 text-stone-400  flex flex-col gap-2">
-            <p className="flex items-center gap-2">
-              <GoDotFill /> C++
+          <section className="p-10 pt-0">
+            <input
+              type="text"
+              placeholder="Email address"
+              className={`w-full p-5 py-3 outline-none border-b-1 border-neutral-700 mb-10 focus:border-[#006fff]`}
+            />
+            <input
+              type="text"
+              placeholder="New password"
+              className="w-full p-5 py-3 outline-none border-b-1 border-neutral-700 focus:border-[#006fff]"
+            />
+            <p className="p-5 text-red-500 px-0 flex items-center gap-2">
+              <IoIosAlert /> Invalid email address, try other.
             </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> PYTHON
-            </p>
-
-            <p className="flex items-center gap-2">
-              <GoDotFill /> JAVASCRIPT
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> GO
-            </p>
-          </section>
-        </section>
-        <section className="p-7 pb-0">
-          <header className="mb-5 text-xm">
-            <h2>FRAMEWORKS & LIBRARIES</h2>
-          </header>
-          <section className="ml-3 text-stone-400  flex flex-col gap-2">
-            <p className="flex items-center gap-2">
-              <GoDotFill /> BOOST
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> SFML
-            </p>
-
-            <p className="flex items-center gap-2">
-              <GoDotFill /> REACT JS
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> NEXT JS
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> NODE JS
-            </p>
-          </section>
-        </section>
-        <section className="p-7 pb-0">
-          <header className="mb-5 text-xm">
-            <h2>DATABASES</h2>
-          </header>
-          <section className="ml-3 text-stone-400  flex flex-col gap-2">
-            <p className="flex items-center gap-2">
-              <GoDotFill /> SQL
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> NO SQL ( MONGODB )
-            </p>
-          </section>
-        </section>
-
-        <section className="p-7">
-          <header className="mb-5 text-xm">
-            <h2>OTHERS</h2>
-          </header>
-          <section className="ml-3 text-stone-400  flex flex-col gap-2">
-            <p className="flex items-center gap-2">
-              <GoDotFill /> GIT / GITHUB
-            </p>
-            <p className="flex items-center gap-2">
-              <GoDotFill /> REST APIs
-            </p>
+            <button className="p-5 bg-sky-600 py-3 rounded-xl float-right mt-6">
+              Enter
+            </button>
           </section>
         </section>
       </section>
-      <section className="w-[80vw]"></section>
-    </section>
+      <Navbar />
+    </>
   );
 }
