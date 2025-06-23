@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter();
+const inter = Inter({
+  subsets: ["latin"],
+  preload: true,
+});
 
 export const metadata = {
   title: "DEV PORTFOLIO",

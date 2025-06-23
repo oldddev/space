@@ -5,7 +5,10 @@ import { IoIosAlert } from "react-icons/io";
 import { GoCheck } from "react-icons/go";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 
-const manrope = Manrope();
+const manrope = Manrope({
+  subsets: ["latin"],
+  preload: true,
+});
 
 export default function Home() {
   return (
