@@ -7,7 +7,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "DEV PORTFOLIO",
+  title: "Sign up | Strave",
   description: "HATES RUST",
 };
 
