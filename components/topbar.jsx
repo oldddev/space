@@ -18,7 +18,7 @@ export default function Topbar() {
         {active && <RxCross2 size={20} />}
       </div>
       <div
-        className={`absolute w-50 right-0 h-40 top-full bg-neutral-900 border-1 border-neutral-800 bottom-0 mr-3 mt-3 rounded-xl grid-rows-3 overflow-hidden ${
+        className={`z-100 absolute w-50 right-0 h-40 top-full bg-neutral-900 border-1 border-neutral-800 bottom-0 mr-5 mt-5 rounded-xl grid-rows-3 overflow-hidden ${
           active ? "grid" : "hidden"
         }`}
       >
