@@ -18,12 +18,18 @@ export default function Research() {
       <div className="p-5 pt-0 overflow-hidden md:w-200 h-full md:flex">
         <img
           src="https://cdn.esahubble.org/archives/images/screen/heic0702a.jpg"
-          className="rounded-2xl object-cover w-full h-full"
+          className="rounded-2xl object-cover md:w-60 md:h-60 w-full h-full"
         />
         <div className="mt-5 text-neutral-400 md:ml-5 md:mt-3">
-          <div className="mb-4 flex items-center gap-5">
-            <FaHeart size="20" color="red" />
-            <FaComment size={20} color="" />
+          <div className="mb-4 flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <FaHeart size="20" color="red" />
+              <p>718</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <FaComment size={20} color="" />
+              <p>65</p>
+            </div>
           </div>
           <p>
             Black holes are among the most mysterious cosmic objects, much
