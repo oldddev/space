@@ -17,7 +17,7 @@ export default function SettingsNav() {
         <RxDotsHorizontal size={20} />
       </div>
       <div
-        className={`fixed left-20 bottom-2 w-52 rounded-xl overflow-hidden bg-neutral-900 flex-col ${
+        className={`fixed left-20 bottom-3 w-52 rounded-xl overflow-hidden bg-neutral-900 flex-col ${
           active ? "flex" : "hidden"
         }`}
       >
